@@ -48,8 +48,7 @@
     </style>
     <script>
         var fileBool = false
-        var target = this
-        this.changed = function(e) {
+        this.changed = (e) => {
              this.hoge.srcObject = e.target.files[0]
         }
     </script>
