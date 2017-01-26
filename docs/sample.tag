@@ -45,7 +45,6 @@
         }
     </style>
     <script>
-        var fileBool = false
         var target = this;
         this.changed = (e) => {
             target.preview = true;
