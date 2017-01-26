@@ -50,6 +50,7 @@
         this.changed = (e) => {
             target.preview = true;
             target.previewSrc = URL.createObjectURL(e.target.files[0])
+            target.update()
         }
     </script>
 </form-video>
