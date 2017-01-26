@@ -50,7 +50,7 @@
         var fileBool = false
         var target = this
         this.changed = function(e) {
-             this.hoge.srcObject = e.target.files[0]
+             this.hoge.srcObject = e.files[0]
         }
     </script>
 </form-video>
