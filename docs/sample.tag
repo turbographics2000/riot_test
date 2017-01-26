@@ -1,4 +1,5 @@
- <div id="form-video">
+<form-video>
+    <div id="form-video">
         <label for="video">動画を選択</label>
         <div class="video-wrapper" show={ preview }>
             <video preload="auto">
@@ -73,3 +74,4 @@
             reader.readAsDataURL(fileData)
         }
     </script>
+</form-video>
