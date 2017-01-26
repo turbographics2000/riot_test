@@ -48,9 +48,10 @@
     </style>
     <script>
         var fileBool = false
+        var target = this;
         this.changed = (e) => {
-             hoge.srcObject = e.target.files[0]
-             hoge.play();
+             target.tags.video.srcObject = e.target.files[0]
+             target.tags.video.play();
         }
     </script>
 </form-video>
