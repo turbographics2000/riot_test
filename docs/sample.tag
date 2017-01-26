@@ -6,7 +6,7 @@
                 <source src="{ previewSrc }" type="video/mp4">
             </video>
         </div>
-        <input type="file" accept="video/*" onchange="{ changed }"></input>
+        <input id="hoge" type="file" accept="video/*" onchange="{ changed }"></input>
     </div>
     <style>
         #form-video {
