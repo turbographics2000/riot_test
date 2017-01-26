@@ -2,9 +2,7 @@
     <div id="form-video">
         <label for="video">動画を選択</label>
         <div class="video-wrapper" show={ preview }>
-            <video id="hoge" preload="auto">
-                <source src="{ previewSrc }" type="video/mp4">
-            </video>
+            <video preload="auto" src="{ previewSrc }"></video>
         </div>
         <input id="video" type="file" accept="video/*" onchange="{ changed }"></input>
     </div>
@@ -50,7 +48,7 @@
         var fileBool = false
         var target = this;
         this.changed = (e) => {
-             hoge.srcObject = e.target.files[0]
+             target.previewSrc = URL.createObjectURL(e.target.files[0])
              hoge.play();
         }
     </script>
