@@ -48,7 +48,8 @@
         var fileBool = false
         var target = this;
         this.changed = (e) => {
-             target.previewSrc = URL.createObjectURL(e.target.files[0])
+            target.preview = true;
+            target.previewSrc = URL.createObjectURL(e.target.files[0])
         }
     </script>
 </form-video>
