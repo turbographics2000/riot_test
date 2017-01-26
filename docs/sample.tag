@@ -2,11 +2,11 @@
     <div id="form-video">
         <label for="video">動画を選択</label>
         <div class="video-wrapper" show={ preview }>
-            <video id="hoge" preload="auto">
+            <video name="video" preload="auto">
                 <source src="{ previewSrc }" type="video/mp4">
             </video>
         </div>
-        <input id="video" type="file" accept="video/*" onchange="{ changed }"></input>
+        <input type="file" accept="video/*" onchange="{ changed }"></input>
     </div>
     <style>
         #form-video {
