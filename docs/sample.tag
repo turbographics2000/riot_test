@@ -2,11 +2,11 @@
     <div id="form-video">
         <label for="video">動画を選択</label>
         <div class="video-wrapper" show={ preview }>
-            <video id="video" preload="auto">
+            <video id="hoge" preload="auto">
                 <source src="{ previewSrc }" type="video/mp4">
             </video>
         </div>
-        <input type="file" accept="video/*" onchange="{ changed }"></input>
+        <input id="video" type="file" accept="video/*" onchange="{ changed }"></input>
     </div>
     <style>
         #form-video {
@@ -50,7 +50,7 @@
         var fileBool = false
         var target = this
         this.changed = function(e) {
-            this.video.srcObject = e.target.files[0]
+             this.hoge.srcObject = e.target.files[0]
         }
     </script>
 </form-video>
