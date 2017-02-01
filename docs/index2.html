@@ -15,7 +15,7 @@
                 background: #c0392b;
             }
         </style>
-    </head>
+</head>
 
 <body>
     <video id="player" style="width: 100%; height: 300px"></video>
@@ -24,7 +24,7 @@
     noUiSlider.create(range, {
         start: 0,
         animate: false,
-        connect: [true, false], 
+        connect: [true, false],
         orientation: 'horizontal',
         behaviour: 'tap-drag',
         tooltips: false,
@@ -36,14 +36,32 @@
     range.noUiSlider.on('update', function (values) {
         console.log(values[0]);
     });
+    slider.noUiSlider.on('slide', function () {
+        console.log('slide');
+    });
 
+    slider.noUiSlider.on('set', function () {
+        //console.log('set');
+    });
+
+    slider.noUiSlider.on('change', function () {
+        //console.log('change');
+    });
+
+    slider.noUiSlider.on('start', function () {
+        console.log('start');
+    });
+
+    slider.noUiSlider.on('end', function () {
+        console.log('end');
+    });
     player.onloadedmetadata = (evt) => {
         console.log(evt, player);
         player.play();
         raf();
     }
-    player.src='sintel.mp4';
-    function raf(){
+    player.src = 'sintel.mp4';
+    function raf() {
         requestAnimationFrame(raf);
         range.noUiSlider.set(player.currentTime / player.duration);
     }
