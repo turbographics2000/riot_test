@@ -38,6 +38,7 @@
     });
     range.noUiSlider.on('slide', function () {
         console.log('slide');
+        player.currentTime = range.noUiSlider.get() * player.duration;
     });
 
     range.noUiSlider.on('set', function () {
@@ -50,10 +51,12 @@
 
     range.noUiSlider.on('start', function () {
         console.log('start');
+        player.pause();
     });
 
     range.noUiSlider.on('end', function () {
         console.log('end');
+        player.play();
     });
     player.onloadedmetadata = (evt) => {
         console.log(evt, player);
