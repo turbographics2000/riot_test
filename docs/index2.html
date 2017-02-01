@@ -38,10 +38,10 @@
 
     player.onloadedmetadata = (evt) => {
         console.log(evt, player);
+        player.play();
     }
     player.ontimeupdate = (evt) => {
         range.noUiSlider.set(player.currentTime / player.duration);
-        player.play();
     }
     player.src='sintel.mp4';
 </script>
