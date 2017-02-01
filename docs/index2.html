@@ -22,10 +22,10 @@
 <div id="range"></div>
 <script>
     noUiSlider.create(range, {
-        start: 0, // 4 handles, starting at...
-        connect: [true, false], // Display a colored bar between the handles
-        orientation: 'horizontal', // Orient the slider vertically
-        behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+        start: 0, 
+        connect: [true, false], 
+        orientation: 'horizontal',
+        behaviour: 'tap-drag',
         tooltips: false,
         range: {
             'min': 0,
@@ -39,11 +39,16 @@
     player.onloadedmetadata = (evt) => {
         console.log(evt, player);
         player.play();
+        raf();
     }
     player.ontimeupdate = (evt) => {
         range.noUiSlider.set(player.currentTime / player.duration);
     }
     player.src='sintel.mp4';
+    function raf(){
+        requestAnimationFrame(raf);
+        range.noUiSlider.set(player.currentTime / player.duration);
+    }
 </script>
 </body>
 
