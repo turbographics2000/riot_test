@@ -21,11 +21,6 @@
     <video id="player" style="width: 100%; height: 300px"></video>
 <div id="range"></div>
 <script>
-    player.onloadedmetadata = (evt) => {
-        console.log(evt, player);
-    }
-    player.src='sintel.mp4';
-    
     noUiSlider.create(range, {
         start: 0, // 4 handles, starting at...
         connect: [true, false], // Display a colored bar between the handles
@@ -40,6 +35,14 @@
     range.noUiSlider.on('update', function (values) {
         console.log(values[0]);
     });
+
+    player.onloadedmetadata = (evt) => {
+        console.log(evt, player);
+    }
+    player.ontimeupdate = (evt) => {
+        range.noUiSlider.set(player.currentTime / player.duration);
+    }
+    player.src='sintel.mp4';
 </script>
 </body>
 
