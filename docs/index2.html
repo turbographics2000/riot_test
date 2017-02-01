@@ -21,6 +21,11 @@
     <video id="player" style="width: 100%; height: 300px"></video>
 <div id="range"></div>
 <script>
+    player.onloadedmetadata = (evt) => {
+        console.log(evt, player);
+    }
+    player.src='sintel.mp4';
+    
     noUiSlider.create(range, {
         start: 0, // 4 handles, starting at...
         connect: [true, false], // Display a colored bar between the handles
