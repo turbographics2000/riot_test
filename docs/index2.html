@@ -40,11 +40,13 @@
     player.onloadedmetadata = (evt) => {
         console.log(evt, player);
         player.play();
-    }
-    player.ontimeupdate = (evt) => {
-        range.noUiSlider.set(player.currentTime / player.duration);
+        raf();
     }
     player.src='sintel.mp4';
+    function raf(){
+        requestAnimationFrame(raf);
+        range.noUiSlider.set(player.currentTime / player.duration);
+    }
 </script>
 </body>
 
