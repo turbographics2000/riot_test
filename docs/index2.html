@@ -10,27 +10,27 @@
         <video id="player"></video>
         <div id="range"></div>
         <script>
-        noUiSlider.create(range, {
-            start: [0], // 4 handles, starting at...
-            connect: true, // Display a colored bar between the handles
-            direction: 'rtl', // Put '0' at the bottom of the slider
-            orientation: 'horizontal', // Orient the slider vertically
-            behaviour: 'tap-drag', // Move handle on tap, bar is draggable
-            tooltips: false,
-            format: wNumb({
-                decimals: 0
-            }),
-            range: {
-                'min': 0,
-                'max': 1
-            },
-            pips: { // Show a scale with the slider
-                mode: 'steps',
-                stepped: true,
-                density: 4
-            }
-        });
-    </script>
+            noUiSlider.create(range, {
+                start: [0], // 4 handles, starting at...
+                connect: true, // Display a colored bar between the handles
+                direction: 'rtl', // Put '0' at the bottom of the slider
+                orientation: 'horizontal', // Orient the slider vertically
+                behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+                tooltips: false,
+                format: wNumb({
+                    decimals: 0
+                }),
+                range: {
+                    'min': 0,
+                    'max': 1
+                },
+                pips: { // Show a scale with the slider
+                    mode: 'steps',
+                    stepped: true,
+                    density: 4
+                }
+            });
+        </script>
 </body>
 
 </html>
