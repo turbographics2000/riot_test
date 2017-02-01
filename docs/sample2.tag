@@ -1,4 +1,4 @@
-<div id="form-video">
+<form-video>
     <label for="video">動画を選択</label>
     <input id="video" type="file" accept="video/*" onchange="{ changed }"></input>
     <div class="video-wrapper" if={ preview }>
@@ -17,4 +17,4 @@
             </div>
         </div>
     </div>
-</div>
+</form-video>
